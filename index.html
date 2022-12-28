@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunely -Online Music Player</title>
+    <link rel="stylesheet" type="text/css" href="index_styles.css">
+    <!-- font awesome kit link -->
+    <script src="https://kit.fontawesome.com/6131559c78.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- first the nav bar -->
+    <nav id="nav-bar">
+        <!-- div containing brand name and logo -->
+        <div class="nav-logo">
+            <img src="media/navbar-logo.png" alt="brand logo">
+            <div class="logo-info">
+                <div class="logo-info-name">Tunely</div>
+                <br>
+                <div class="logo-info-subname">Online Music Player</div>
+            </div>
+        </div>
+
+        <!-- favourites animated div -->
+        <div class="nav-favourites">Favourites</div>
+
+        <!-- search bar div -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+
+        <!-- bell icon -->
+        <i class="fa-solid fa-bell"></i>
+
+        <!-- user image -->
+        <img id="user-image" src="media/navbar-user.jpg" alt="logged in user">
+
+        <!-- hamburger icon which will appear after screen width is reduced below 992px -->
+        <div class="hamburger">
+            <label for="check">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+    </nav>
+    <!-- end of nav bar -->
+
+    <!-- start of main section -->
+    <main>
+        <!-- carousel section -->
+        <section id="carousel">
+            <div class="section-content">
+                <img id="car-img-1" src="media/carousel/carousel1.jpg">
+                <img id="car-img-2" src="media/carousel/carousel2.jpg">
+                <img id="car-img-3" src="media/carousel/carousel3.jpg">
+            </div>
+        </section>
+        
+        <!-- latest release section -->
+        <section id="latest-release">
+            <h1 class="section-heading">Latest Release</h1>
+
+            <div class="section-content">
+                <!-- first item of latest release section termed lr1 -->
+                <div id="lr1">
+                    <div class="latest-release-image">
+                        <div class="play-button">
+                            <!-- the play button over the background image is a link connected to the bottom music player -->
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="latest-release-info">
+                        <div class="lr-name">Dr. DRE</div>
+                        <!-- this link on getting clicked will make appear the options box which is initially hidden -->
+                        <a href="#lr-options-1">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </a>
+                        <br>
+                        <div class="lr-time">4.44</div>
+                        <div class="lr-date">May, 2022</div>
+
+                        <!-- the options box which is initially hidden-->
+                        <div id="lr-options-1" class="lr-options">
+                            <div class="lr-options-item">
+                                <!-- link connected to bottom music player -->
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                    Play Now
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Queue
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Favourites
+                            </div>
+                            <hr>
+                            <!-- link to close the options box -->
+                            <a href="#latest-release" style="color:rgb(162, 43, 43); text-align: center; display: block;">Close</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- other similar items of the latest release section -->
+                <div id="lr2">
+                    <div class="latest-release-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="latest-release-info">
+                        <div class="lr-name">Ganja Gun</div>
+                        <a href="#lr-options-2">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </a>
+                        <br>
+                        <div class="lr-time">4.44</div>
+                        <div class="lr-date">May, 2022</div>
+                        <div id="lr-options-2" class="lr-options">
+                            <div class="lr-options-item">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                    Play Now
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Queue
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Favourites
+                            </div>
+                            <hr>
+                            <a href="#latest-release" style="color:rgb(162, 43, 43); text-align: center; display: block;">Close</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="lr3">
+                    <div class="latest-release-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="latest-release-info">
+                        <div class="lr-name">Havana</div>
+                        <a href="#lr-options-3">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </a>
+                        <br>
+                        <div class="lr-time">4.44</div>
+                        <div class="lr-date">May, 2022</div>
+                        <div id="lr-options-3" class="lr-options">
+                            <div class="lr-options-item">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                    Play Now
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Queue
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Favourites
+                            </div>
+                            <hr>
+                            <a href="#latest-release" style="color:rgb(162, 43, 43); text-align: center; display: block;">Close</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="lr4">
+                    <div class="latest-release-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="latest-release-info">
+                        <div class="lr-name">Loose Yourself</div>
+                        <a href="#lr-options-4">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </a>
+                        <br>
+                        <div class="lr-time">4.44</div>
+                        <div class="lr-date">May, 2022</div>
+                        <div id="lr-options-4" class="lr-options">
+                            <div class="lr-options-item">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                    Play Now
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Queue
+                            </div>
+                            <hr>
+                            <div class="lr-options-item">
+                                <i class="fa-solid fa-plus"></i>
+                                Add to Favourites
+                            </div>
+                            <hr>
+                            <a href="#latest-release" style="color:rgb(162, 43, 43); text-align: center; display: block;">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of latest release section -->
+
+        <!-- Start of Popular Artists section -->
+        <section id="popular-artists">
+            <!-- section heading -->
+            <h1 class="section-heading">Popular Artists</h1>
+
+            <!-- section content -->
+            <div class="section-content">
+                <!-- first artist -->
+                <a href="single playlist screen.html">
+                    <div class="pa-item" id="pa-item-1">
+                        <div class="pa-name">Bruno<br> Mars</div>
+                    </div>
+                </a>
+
+                <!-- second artist and so on -->
+                <a href="single playlist screen.html">
+                    <div class="pa-item" id="pa-item-2">
+                        <div class="pa-name">Drake</div>
+                    </div>
+                </a>
+
+                <a href="single playlist screen.html">
+                    <div class="pa-item" id="pa-item-3">
+                        <div class="pa-name">Ed <br> Sheeran</div>
+                    </div>
+                </a>
+
+                <a href="single playlist screen.html">
+                    <div class="pa-item" id="pa-item-4">
+                        <div class="pa-name">Billie <br> Eilish</div>
+                    </div>
+                </a>
+
+                <a href="single playlist screen.html">
+                    <div class="pa-item" id="pa-item-5">
+                        <div class="pa-name">Snoop <br> Dogg</div>
+                    </div>
+                </a>
+
+                <a href="single playlist screen.html">
+                    <div class="pa-item" id="pa-item-6">
+                        <div class="pa-name">Rudy <br> Mancuso</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- End of popular artists section -->
+
+        <!-- start of stations section -->
+        <section id="stations">
+            <!-- section heading -->
+            <h1 class="section-heading">Stations</h1>
+
+            <!-- section content -->
+            <div class="section-content">
+                <!-- first station -->
+                <div class="sta-item" id="sta-item-1">
+                    <div class="sta-name">Love</div>
+                    <div class="sta-bg"></div>
+                </div>
+
+                <!-- second station -->
+                <div class="sta-item" id="sta-item-2">
+                    <div class="sta-name">Retro</div>
+                    <div class="sta-bg"></div>
+                </div>
+
+                <div class="sta-item" id="sta-item-3">
+                    <div class="sta-name">Chill</div>
+                    <div class="sta-bg"></div>
+                </div>
+
+                <div class="sta-item" id="sta-item-4">
+                    <div class="sta-name">Pop</div>
+                    <div class="sta-bg"></div>
+                </div>
+
+                <div class="sta-item" id="sta-item-5">
+                    <div class="sta-name">Workout</div>
+                    <div class="sta-bg"></div>
+                </div>
+
+                <div class="sta-item" id="sta-item-6">
+                    <div class="sta-name">Rock</div>
+                    <div class="sta-bg"></div>
+                </div>
+            </div>
+        </section>
+        <!-- end of stations section -->
+
+        <!-- start of banners -->
+        <section id="banners">
+            <div class="banner">
+                <div class="b-outer">
+                    <div class="b-inner">Party</div>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="b-outer">
+                    <div class="b-inner">Electronic</div>
+                </div>
+            </div>
+            
+            <div class="banner">
+                <div class="b-outer">
+                    <div class="b-inner">Road Trip</div>
+                </div>
+            </div>
+        </section>
+        <!-- end of banners -->
+
+        <!-- start of latest english section -->
+        <section class="latest-eng-hin" id="latest-english">
+            <!-- section heading -->
+            <h1 class="section-heading">Latest English</h1>
+
+            <!-- section content -->
+            <div class="section-content">
+                <!-- first item -->
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <!-- play button link connected to bottom player -->
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Song</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <!-- similar other items -->
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Song</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Song</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Song</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Song</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Song</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+            </div>
+        </section>
+        <!-- end of latest english section -->
+
+        <!-- start of latest hindi section -->
+        <section class="latest-eng-hin" id="latest-hindi">
+            <!-- section heading -->
+            <h1 class="section-heading">Latest Hindi</h1>
+
+            <!-- section content -->
+            <div class="section-content">
+                <!-- first item -->
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <!-- play button over image connected to bottom player  -->
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Gaana</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <!-- similar other items of the section -->
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Gaana</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Gaana</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Gaana</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Gaana</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+
+                <div class="leh-item">
+                    <div class="leh-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="leh-name">Gaana</div>
+                    <br>
+                    <div class="leh-date">May, 2022</div>
+                </div>
+            </div>
+        </section>
+        <!-- end of latest hindi section -->
+    </main>
+
+    
+    <!-- start of aside section containing the queue -->
+
+    <!-- checkbox for controlling the visibility of the hidden aside section (when screen width is less than 992px) when the label is clicked  -->
+    <input type="checkbox" id="check">
+
+    <!-- start of aside section -->
+    <aside>
+        <!-- header div containing heading and options button and the lightbox animation -->
+        <div class="aside-header" id="queue">
+            <h1 class="section-heading">Queue</h1>
+            <div class="queue-dropdown">
+                Queue
+                <a href="#queue-lightbox"><i class="fa-solid fa-circle-chevron-down"></i></a> 
+            </div>
+            <!-- lightbox animation div -->
+            <div class="queue-lightbox" id="queue-lightbox">
+                <div class="lightbox-item">Playlist</div>
+                <hr>
+                <div class="lightbox-item">Favourites</div>
+                <hr>
+                <div class="lightbox-item">
+                    <a href="#queue">Close</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- aside content div -->
+        <div class="section-content">
+            <!-- first item of aside content -->
+            <div class="queue-item">
+                <div class="qi-info">01</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <!-- other similar items of aside content -->
+            <div class="queue-item">
+                <div class="qi-info">02</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">03</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">04</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">05</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">06</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">07</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">08</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">09</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">10</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">11</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="queue-item">
+                <div class="qi-info">12</div>
+                <div class="qi-image">
+                    <div class="play-button">
+                        <a href="#bottom-player">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="qi-info qi-name">
+                    New Skin <br>
+                    Flume
+                </div>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
+    </aside>
+    <!-- end of aside section -->
+
+
+    <!-- start of bottom music player section -->
+    <div id="bottom-player">
+        <!-- div containing song name, image  -->
+        <div class="music-name">
+            <img src="media/latest release songs/havana.jpg">
+            <div class="mn-info">
+                <div class="mn-name">Havana</div>
+                <br>
+                <div class="mn-artist">Camila Cabello</div>
+            </div>
+            <!-- div containing icons on left of botom player -->
+            <div class="mn-icons">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-ban"></i>
+            </div>
+        </div>
+ 
+        <div class="music-player">
+            <div class="player-icons">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-circle-pause"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <br>
+            <div class="music-slider">
+                <div>0:00</div><input type="range" min="0" max="100"><div>4:44</div>
+            </div>
+        </div>
+        <div class="music-volume">
+            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-volume-low"></i>
+            <input type="range" min="0" max="100">
+        </div>
+        <a href="#nav-bar" id="close-player"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <!-- end of bottom player -->
+</body>
+</html>

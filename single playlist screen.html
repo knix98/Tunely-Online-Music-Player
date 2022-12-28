@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunely -Online Music Player</title>
+    <link rel="stylesheet" type="text/css" href="single playlist screen styles.css">
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/6131559c78.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- first the nav bar -->
+    <nav id="nav-bar">
+        <!-- div containing brand name and logo -->
+        <div class="nav-logo">
+            <img src="media/navbar-logo.png" alt="brand logo">
+            <div class="logo-info">
+                <div class="logo-info-name">Tunely</div>
+                <br>
+                <div class="logo-info-subname">Online Music Player</div>
+            </div>
+        </div>
+
+        <div class="nav-favourites">Favourites</div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+
+        <i class="fa-solid fa-bell"></i>
+
+        <img id="user-image" src="media/navbar-user.jpg" alt="logged in user">
+
+        <!-- hamburger icon which will appear after screen width is reduced -->
+            <div class="hamburger">
+                <label for="check">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+    </nav>
+    <!-- end of nav bar -->
+
+    <!-- start of main section -->
+    <main>
+        <!-- start of jumbotron section -->
+        <section id="jumbotron">
+            <!-- jumbotron image -->
+            <img src="media/artists/bruno mars.jpg" alt="artist" class="jumbo-image">
+            <!-- jumbotron other info and button -->
+            <div class="jumbo-info">
+                <div class="artist-name">Bruno Mars</div>
+                <div class="followers">922 Followers</div>
+                <br>
+                <div class="artist-type">Pop artist</div>
+                <br>
+                <div class="artist-about">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <br>
+                <button>Play All</button>
+                <div class="follow-button">Follow</div>
+                <br>
+                <div class="artist-numbers">
+                    250 Tracks | 125 Albums
+                </div>
+            </div>
+        </section>
+        <!-- end of jumbotron -->
+
+        <!-- start of the playlist below jumbotron -->
+        <section id="playlist">
+            <!-- first playlist item -->
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">01</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <!-- play button connected to bottom music player -->
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <!-- similar other items of playlist -->
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">02</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">03</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">04</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">05</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">06</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">07</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">08</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">09</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="song-info">
+                    <div class="si-number">10</div>
+                    <div class="si-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="si-about">
+                        <div class="si-song-name">Mirage</div>
+                        <br>
+                        <div class="si-song-artist">Else</div>
+                    </div>
+                </div>
+                <div class="song-duration">4:44</div>
+                <div class="song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- end of main section -->
+
+    <!-- start of aside section -->
+    <!-- checkbox for controlling the visibility of the hidden aside section (when screen width is less than 992px) when the label is clicked  -->
+    <input type="checkbox" id="check">
+
+    <aside>
+        <!-- start of similar artists section -->
+        <section id="similar-artists">
+            <!-- heading of the first section of aside -->
+            <div class="aside-header">
+                <div class="section-heading">Similar Artists</div>
+                <div class="header-options">View All</div>
+            </div>
+
+            <!-- content of section of aside -->
+            <div class="aside-content">
+                <!-- first item of similar artists -->
+                <div class="similar-artist-item">
+                    <div class="similar-artist-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="similar-artist-about">
+                        <div class="sa-name">Mirage</div>
+                        <br>
+                        <div class="sa-band">Else</div>
+                    </div>
+
+                    <div class="similar-artist-extra">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <br>
+                        4:44
+                    </div>
+                </div>
+
+                <!-- similar other similar artists items -->
+                <div class="similar-artist-item">
+                    <div class="similar-artist-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="similar-artist-about">
+                        <div class="sa-name">Mirage</div>
+                        <br>
+                        <div class="sa-band">Else</div>
+                    </div>
+
+                    <div class="similar-artist-extra">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <br>
+                        4:44
+                    </div>
+                </div>
+
+                <div class="similar-artist-item">
+                    <div class="similar-artist-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="similar-artist-about">
+                        <div class="sa-name">Mirage</div>
+                        <br>
+                        <div class="sa-band">Else</div>
+                    </div>
+
+                    <div class="similar-artist-extra">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <br>
+                        4:44
+                    </div>
+                </div>
+
+                <div class="similar-artist-item">
+                    <div class="similar-artist-image">
+                        <div class="play-button">
+                            <a href="#bottom-player">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="similar-artist-about">
+                        <div class="sa-name">Mirage</div>
+                        <br>
+                        <div class="sa-band">Else</div>
+                    </div>
+
+                    <div class="similar-artist-extra">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <br>
+                        4:44
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of similar artists -->
+
+        <!-- start of recently played aside section -->
+        <section id="recently-played">
+            <div class="aside-header">
+                <div class="section-heading">Recently Played</div>
+                <div class="header-options">View All</div>
+            </div>
+
+            <div class="aside-content">
+                <div class="playlist-item">
+                    <div class="song-info">
+                        <div class="si-number">01</div>
+                        <div class="si-image">
+                            <div class="play-button">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="si-about">
+                            <div class="si-song-name">Mirage</div>
+                            <br>
+                            <div class="si-song-artist">Else</div>
+                        </div>
+                    </div>
+                    <div class="song-icons">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="playlist-item">
+                    <div class="song-info">
+                        <div class="si-number">02</div>
+                        <div class="si-image">
+                            <div class="play-button">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="si-about">
+                            <div class="si-song-name">Mirage</div>
+                            <br>
+                            <div class="si-song-artist">Else</div>
+                        </div>
+                    </div>
+                    <div class="song-icons">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="playlist-item">
+                    <div class="song-info">
+                        <div class="si-number">03</div>
+                        <div class="si-image">
+                            <div class="play-button">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="si-about">
+                            <div class="si-song-name">Mirage</div>
+                            <br>
+                            <div class="si-song-artist">Else</div>
+                        </div>
+                    </div>
+                    <div class="song-icons">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="playlist-item">
+                    <div class="song-info">
+                        <div class="si-number">04</div>
+                        <div class="si-image">
+                            <div class="play-button">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="si-about">
+                            <div class="si-song-name">Mirage</div>
+                            <br>
+                            <div class="si-song-artist">Else</div>
+                        </div>
+                    </div>
+                    <div class="song-icons">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="playlist-item">
+                    <div class="song-info">
+                        <div class="si-number">05</div>
+                        <div class="si-image">
+                            <div class="play-button">
+                                <a href="#bottom-player">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="si-about">
+                            <div class="si-song-name">Mirage</div>
+                            <br>
+                            <div class="si-song-artist">Else</div>
+                        </div>
+                    </div>
+                    <div class="song-icons">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of recently played -->
+    </aside>
+
+    <!-- bottom music player -->
+    <div id="bottom-player">
+        <div class="music-name">
+            <img src="media/mirage.jpg">
+            <div class="mn-info">
+                <div class="mn-name">Mirage</div>
+                <br>
+                <div class="mn-artist">Else</div>
+            </div>
+            <div class="mn-icons">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-ban"></i>
+            </div>
+        </div>
+        <div class="music-player">
+            <div class="player-icons">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-circle-pause"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <br>
+            <div class="music-slider">
+                <div>0:00</div><input type="range" min="0" max="100"><div>4:44</div>
+            </div>
+        </div>
+        <div class="music-volume">
+            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-volume-low"></i>
+            <input type="range" min="0" max="100">
+        </div>
+        <a href="#nav-bar" id="close-player"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+</body>
+</html>

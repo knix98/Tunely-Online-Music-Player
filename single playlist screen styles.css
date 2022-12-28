@@ -1,0 +1,846 @@
+/*various variables name*/
+:root{
+    --font-color-1: #fbeaef; /*fo headings*/
+    --font-color-2: #e1e1ce; /*for content*/
+    --play-button-color: #e4eded; /*for play buttons*/
+}
+
+body{
+    margin: 0;
+    font-family: monospace;
+    font-size: medium;
+    padding: 0 4vw;
+    background: linear-gradient(to top, #8e2de2, #4a00e0);
+}
+
+/* removing margin for all the textual elements */
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+
+/* removing all the styles from the links and formatting them white */
+a{
+	text-decoration: none;
+	color: white;
+}
+
+nav, main, aside, div, section{
+    display: inline-block;
+}
+
+main{
+    width: 63vw;
+    height: 90vh;
+    margin-top: 10vh;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+aside{
+    width: 24.7vw;
+    margin-left: 1.5vw;
+    margin-top: 10vh;
+    height: 90vh;
+    vertical-align: top;
+}
+
+/*styling of navbar*/
+nav{
+    width: 100vw; 
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, #000, #0000);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    /*styling of brand name and logo*/
+    .nav-logo{
+        margin-top: 1vh;
+        margin-left: 2vw;
+    }
+
+    @keyframes logoAnimation{
+        from{
+            transform: rotate(0deg) scale(1);
+        }
+        50%{
+            transform: rotate(180deg) scale(1.15);
+        }
+        to{
+            transform: rotate(360deg) scale(1);
+        }
+    }
+
+    .nav-logo img{
+        height: 6.8vh;
+        width: 6.8vh;
+        border-radius: 50%;
+        animation-name: logoAnimation;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+    }
+
+    .logo-info{
+        height: 8vh;
+        width: auto;
+        vertical-align: top;
+    }
+
+    .logo-info-name{
+        font-size: 1.5rem;
+        color: rgb(245, 143, 10);
+        letter-spacing: 1px;
+    }
+
+    .logo-info-subname{
+        position: absolute;
+        top: 4.3vh;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        width: 200px;
+        color: var(--font-color-1);
+    }
+
+/*styling of other nav bar items*/
+#user-image{
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    margin-right: 3vw;
+}
+
+@keyframes favAnimation{
+    from{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.nav-favourites{
+    font-size: 1.2rem;
+    color: var(--font-color-1);
+    font-weight: 550;
+    animation-name: favAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bellAnimation{
+    0%{
+        transform: scale(1) rotate(0deg);
+    }
+    25%{
+        transform: scale(1.15) rotate(0deg);
+    }
+    37%{
+        transform: scale(1.15) rotate(-30deg);
+    }
+    62%{
+        transform: scale(1.15) rotate(30deg);
+    }
+    75%{
+        transform: scale(1.15) rotate(0deg);
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+#nav-bar i.fa-bell{
+    font-size: 1.8rem;
+    color: gold;
+    animation-name: bellAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+#nav-bar .search-bar{
+    position: relative;
+}
+#nav-bar .search-bar input{
+    text-align: center;
+    width: 20vw;
+    height: 17px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+#nav-bar .search-bar input:focus{
+    outline: 1px solid grey;
+}
+
+#nav-bar .search-bar .fa-magnifying-glass{
+    position: absolute;
+    left: 6px;
+    top: 3px;
+}
+
+#nav-bar .search-bar .fa-microphone{
+    position: absolute;
+    right: 6px;
+    top: 3px;
+}
+
+/*hamburger icon which will appear when screen size is less than 992px*/
+#nav-bar .hamburger{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 40px;
+    color: var(--font-color-1);
+    font-size: 2rem;
+}
+/*end of styling of navbar*/
+
+/*styling of jumbotron*/
+#jumbotron{
+    width: 100%;
+    height: 21vw;
+    background-color: rgb(10, 29, 85);
+    display: flex;
+}
+
+.jumbo-image{
+    width: 33.3%;
+    height: 100%;
+}
+
+.jumbo-info{
+    width: 66.6%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 3% 4%;
+    font-size: 1rem;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.jumbo-info > div {
+    color: var(--font-color-2);
+    font-size: 1em;
+}
+
+/*styling and positioning of various elements inside jumbotron*/
+.jumbo-info .artist-name{
+    color: var(--font-color-1);
+    font-size: 2em;
+    letter-spacing: 1.5px;
+}
+
+.jumbo-info .followers{
+    float: right;
+    margin-top: 3%;
+}
+
+.jumbo-info .artist-about{
+    width: 100%;
+    height: 30%;
+    margin-top: 3%;
+    font-size: 1em;
+    overflow: scroll;
+}
+.jumbo-info .artist-about::-webkit-scrollbar {
+    display: none;
+}
+
+.jumbo-info button{
+    cursor: pointer;
+    width: 32%;
+    height: 12%;
+    margin-top: 5%;
+    min-height: 21px;
+    border: none;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+    color: var(--font-color-2);
+    background: linear-gradient(to right, #b91515, #2509f9);
+}
+
+.jumbo-info .follow-button{
+    cursor: pointer;
+    margin-left: 9%;
+}
+
+.jumbo-info .artist-numbers{
+    font-size: 0.9em;
+}
+/*end of styling of jumbotron*/
+
+
+/*styling of playlist songs section*/
+#playlist{
+    width: 100%;
+    margin-top: 22px;
+}
+
+.playlist-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background-color: rgb(30, 17, 67);
+    color: var(--font-color-2);
+}
+
+.playlist-item:hover{
+    background-color: #3b118e;
+}
+
+.song-info{
+    display: inline-flex;
+    align-items: center;
+    width: 180px; 
+    margin-left: 10px;
+    justify-content: space-between;
+}
+
+.si-song-name{
+    font-size: 1.1rem;
+    color: var(--font-color-1);
+}
+.si-song-artist{
+    font-size: 0.9rem;
+}
+
+.song-info .si-image{
+    height: 60px;
+    width: 60px;
+    background-image: url("media/mirage.jpg");
+    background-size: cover;
+}
+
+.song-info .si-image .play-button{
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.si-image .play-button a{
+    color: var(--font-color-2);
+}
+
+.si-image:hover{
+    opacity: 0.7;
+}
+.si-image:hover .play-button{
+    opacity: 1;
+}
+
+.song-icons{
+    margin-right: 10px;
+}
+/*end of playlist section*/
+
+
+/*styling of aside section*/
+aside section{
+    width: 100%;
+}
+
+.aside-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aside-header .section-heading{
+    color: var(--font-color-1);
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+.aside-header .header-options{
+    color: var(--font-color-1);
+    font-size: 0.9rem;
+}
+
+.aside-content{
+    width: 100%;
+    margin-top: 1vh;
+    height: 38vh;
+    overflow: scroll;
+}
+.aside-content::-webkit-scrollbar {
+    display: none;
+}
+
+    /*styling of similar artists and recently played section content*/
+    #similar-artists{
+        margin-bottom: 2vh;
+    }
+
+    .similar-artist-item{
+        width: 100%;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+    .similar-artist-item:hover{
+        background-color: #3b118e;
+    }
+
+    .similar-artist-image{
+        width: 80px;
+        height: 80px;
+        background-image: url("media/similar\ artists.jpg");
+        background-size: cover;
+    }
+
+    .similar-artist-image .play-button{
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .similar-artist-image:hover{
+        opacity: 0.7;
+    }
+    .similar-artist-image:hover .play-button{
+        opacity: 1;
+    }
+
+    .similar-artist-about{
+        vertical-align: top;
+    }
+
+    .similar-artist-about .sa-name{
+        font-size: 1.3rem;
+        color: var(--font-color-1);
+    }
+    .similar-artist-about .sa-band{
+        font-size: 0.9rem;
+        color: var(--font-color-2);
+    }
+
+    .similar-artist-extra{
+        vertical-align: top;
+        float: right;
+        text-align: right;
+        font-size: 0.9rem;
+        color: var(--font-color-2);
+    }
+
+    /*similar styles are applied to the recently played content as the playlist item content in main section*/
+    /*just making some minor adjustments*/
+    #recently-played .aside-content .playlist-item{
+        background: none;
+    }
+    
+    #recently-played .aside-content .playlist-item:hover{
+        background: #3b118e;
+    }
+    
+    #recently-played .aside-content .song-info{
+        width: 160px; 
+    }
+
+    #recently-played .aside-content .song-info .si-image{
+        background-image: url("media/recently\ played.jpg");
+        background-size: cover;
+    }
+    /*end of similar artists and recently played*/
+
+/*no need for the visibility of the checkbox which will control the visibility of aside section when screen width < 992px*/
+#check{
+    display: none;
+}
+/*end of aside section*/
+
+
+/*bottom music player*/
+#bottom-player{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 91vw;
+    margin-left: 4.5vw;
+    height: 60px;
+    color: var(--font-color-2);
+    background-color: rgba(9, 3, 27, 0.8);
+}
+
+#bottom-player:target{
+    display: inline-block;
+}
+
+/*bottom player's music name section styling*/
+#bottom-player .music-name img{
+    height: 50px;
+    width: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#bottom-player .music-name > div{
+    vertical-align: top;
+}
+
+#bottom-player .mn-info .mn-name{
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+#bottom-player .music-name .mn-icons{
+    margin-top: 5px;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+/*bottom player's music player section styling*/
+#bottom-player .music-player{
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    height: 100%;
+}
+
+#bottom-player .music-player .music-slider{
+    width: 70%;
+    margin-left: 15%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: baseline;
+}
+#bottom-player .music-player .music-slider > div{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#bottom-player .music-player .player-icons{
+    margin-left: 25%;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+/*styling of song player slider*/
+input[type="range"] {
+    -webkit-appearance: none; 
+    width: 75%;
+    height: 7px;
+    margin: 0 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+  
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+}
+  
+input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+/*styling of bottom player play/pause buttons*/
+#bottom-player .player-icons{
+    width: 50%;
+    display: inline-flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+/*styling of the volume adjuster section on the right end of the bottom music player*/
+#bottom-player .music-volume{
+    vertical-align: top;
+    position: absolute;
+    right: 2%;
+    top: 30%;
+}
+
+.music-volume input[type="range"] {
+    -webkit-appearance: none; 
+    width: 55%;
+    height: 6px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+  
+.music-volume input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+}
+  
+.music-volume input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+/*styling of bottom player's close button on top right corner*/
+#close-player{
+    position: absolute;
+    width: 15px;
+    height: auto;
+    top: 2px;
+    right: 2px;
+    text-align: center;
+    background-color: red;
+    border-radius: 3px;
+}
+
+
+
+/*adding responsiveness to single playlist screen*/
+@media screen and (max-width:1100px){
+    #recently-played .aside-content .song-info{
+        width: 150px;
+    }
+
+    .aside-header .section-heading{
+        font-size: 1.3rem;
+    }
+
+    .aside-header .header-options{
+        font-size: 0.85rem;
+    }
+
+    .jumbo-info{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:992px){
+    .nav-favourites{
+        display: none;
+    }
+
+    #user-image{
+        margin-right: 92px;
+    }
+
+    .logo-info-name{
+        font-size: 1.4rem;
+    }
+
+    .logo-info-subname{
+        font-size: 0.85rem;
+        width: 150px;
+        line-height: 0.8rem;
+    }
+
+    #nav-bar .search-bar input{
+        width: 27vw;
+    }
+
+    .nav-logo img{
+        height: 6.5vh;
+        width: 6.5vh;
+    }
+
+    #nav-bar .hamburger{
+        display: block;
+    }
+
+    aside{
+        display: none;
+        position: fixed;
+        width: 36vh;
+        min-width: 255px;
+        top: -2vh;
+        right: 4.5vw;
+        background-color: rgba(27, 214, 24, 0.5);
+    }
+
+    .aside-header{
+        background-color: rgba(20, 188, 249, 0.8);
+    }
+
+    /* connecting the checkbox to the display of aside section */
+    /* so that when checkbox is checked aside section visible */
+    input[id="check"]:checked ~ aside{
+        display: block;
+    }
+
+    body{
+        width: 100vw;
+        padding: 0;
+    }
+
+    main{
+        width: 80vw;
+        margin-left: 9vw;
+    }
+
+    .jumbo-image{
+        width: 28vw;
+        height: 28vw;
+    }
+
+    #jumbotron{
+        height: 28vw;
+    }
+}
+
+@media screen and (max-width:700px){
+    .logo-info-name{
+        margin-top: 1vh;
+        font-weight: 500;
+        font-size: 1.7rem;
+    }
+
+    .logo-info-subname{
+        display: none;
+    }
+
+    .nav-logo img{
+        height: 6vh;
+        width: 6vh;
+    }
+
+    .nav-logo{
+        margin-left: 4vw;
+    }
+
+    .jumbo-info{
+        font-size: 0.84rem;
+    }
+
+    .jumbo-info .artist-name{
+        font-size: 1.5em;
+    }
+
+    #bottom-player .music-volume{
+        font-size: .8rem;
+        right: -3%;
+        top: 33%;
+    }
+
+    .music-volume input[type="range"] {
+        width: 45%;
+        height: 4.5px;
+    }
+      
+    .music-volume input[type="range"]::-webkit-slider-thumb {
+        height: 12px;
+        width: 12px;
+    }
+
+    #bottom-player .music-name .mn-icons{
+        font-size: .85rem;
+        margin-left: 1px;
+    }    
+}
+
+@media screen and (max-width:600px){
+    html{
+        font-size: smaller;
+    }
+
+    main{
+        width: 90vw;
+        margin-left: 4vw;
+    }
+
+    #bottom-player{
+        width: 100%;
+        margin: 0;
+    }
+
+    #bottom-player .music-name .mn-icons{
+        display: none;
+    }
+
+    #bottom-player .music-name img{
+        height: 40px;
+        width: 40px;
+        margin-top: 10px;
+    }
+
+    #bottom-player .mn-info .mn-name{
+        margin-top: 10px;
+    }
+
+    #bottom-player .music-player .player-icons{
+        margin-top: 10px;
+    }
+
+    #bottom-player .music-volume{
+        right: -10%;
+        top: 40%;
+    }
+
+    .music-volume input[type="range"] {
+        width: 35%;
+        height: 4.5px;
+    }
+
+    .jumbo-info .artist-about{
+        margin-top: 1%;
+    }
+
+    .jumbo-info button{
+        margin-top: 1%;
+        min-height: 17px;
+    }
+
+    #user-image{
+        width: 4vh;
+        height: 4vh;
+        margin-right: 13vw;
+    }
+
+    #nav-bar .hamburger{
+        right: 6vw;
+    }
+
+    #nav-bar i.fa-bell{
+        font-size: 1.5rem;
+    }
+
+    .logo-info-name{
+        letter-spacing: 0;
+        font-size: 1.5rem;
+        margin-top: 1.7vh;
+    }
+
+    .nav-logo img{
+        height: 5vh;
+        width: 5vh;
+        margin-top: 1vh;
+    }
+}
+/*end of responsiveness*/

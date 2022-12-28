@@ -1,0 +1,1293 @@
+:root {
+    --font-color-1: #fbeaef; /*fo headings*/
+    --font-color-2: #e1e1ce; /*for content*/
+    --play-button-color: #e4eded; /*for play buttons*/
+  }
+  
+  body {
+    margin: 0;
+    font-family: monospace;
+    font-size: medium;
+    padding: 0 4vw;
+    background: linear-gradient(to bottom, #c31432, rgb(37, 125, 44), #240b36);
+  }
+  
+  /* removing margin for all the textual elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  
+  /* removing all the styles from the links and formatting them white */
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav,
+  main,
+  aside,
+  div {
+    display: inline-block;
+  }
+  
+  main {
+    width: 63vw;
+    height: 90vh;
+    margin-top: 10vh;
+    overflow: scroll;
+    box-sizing: border-box;
+    padding-top: 5vh;
+  }
+  
+  main::-webkit-scrollbar {
+    display: none;
+  }
+  
+  aside {
+    width: 24.7vw;
+    margin-left: 1.5vw;
+    margin-top: 10vh;
+    height: 90vh;
+    vertical-align: top;
+  }
+  
+  section {
+    width: 100%;
+    height: auto;
+  }
+  
+  .section-heading {
+    color: var(--font-color-1, white);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .section-content {
+    display: flex;
+  }
+  
+  /*styling of navbar*/
+  nav {
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, #000, #0000);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /*styling of brand name and logo*/
+  .nav-logo {
+    margin-top: 1vh;
+    margin-left: 2vw;
+  }
+  
+  @keyframes logoAnimation {
+    from {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.15);
+    }
+    to {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  .nav-logo img {
+    height: 6.8vh;
+    width: 6.8vh;
+    border-radius: 50%;
+    animation-name: logoAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+  
+  .logo-info {
+    height: 8vh;
+    width: auto;
+    vertical-align: top;
+  }
+  
+  .logo-info-name {
+    font-size: 1.5rem;
+    color: rgb(245, 143, 10);
+    letter-spacing: 1px;
+  }
+  
+  .logo-info-subname {
+    position: absolute;
+    top: 4.3vh;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    width: 200px;
+    color: var(--font-color-1);
+  }
+  
+  /*styling of other nav bar items*/
+  #user-image {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    margin-right: 3vw;
+  }
+  
+  @keyframes favAnimation {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .nav-favourites {
+    font-size: 1.2rem;
+    color: var(--font-color-1);
+    font-weight: 550;
+    animation-name: favAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  /* animation for the bell icon inside nav bar */
+  @keyframes bellAnimation {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(1.15) rotate(0deg);
+    }
+    37% {
+      transform: scale(1.15) rotate(-30deg);
+    }
+    62% {
+      transform: scale(1.15) rotate(30deg);
+    }
+    75% {
+      transform: scale(1.15) rotate(0deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  #nav-bar i.fa-bell {
+    font-size: 1.8rem;
+    color: gold;
+    animation-name: bellAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+  
+  #nav-bar .search-bar {
+    position: relative;
+  }
+  #nav-bar .search-bar input {
+    text-align: center;
+    width: 20vw;
+    height: 17px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+  }
+  #nav-bar .search-bar input:focus {
+    outline: 1px solid grey;
+  }
+  
+  #nav-bar .search-bar .fa-magnifying-glass {
+    position: absolute;
+    left: 6px;
+    top: 3px;
+  }
+  
+  #nav-bar .search-bar .fa-microphone {
+    position: absolute;
+    right: 6px;
+    top: 3px;
+  }
+  
+  /*hamburger icon which will appear when screen size is less than 992px*/
+  #nav-bar .hamburger {
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 40px;
+    color: var(--font-color-1);
+    font-size: 2rem;
+  }
+  /*end of styling of navbar*/
+  
+  /*carousel section*/
+  #carousel .section-content {
+    display: inline-flex;
+    width: 50vw;
+    margin-left: 6.5vw;
+    height: 16vw;
+    position: relative; /*to position carousel images*/
+  }
+  
+  #carousel img {
+    position: absolute;
+    width: 20vw;
+    margin: 1px;
+    height: 16vw;
+    transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
+  }
+  
+  #car-img-1 {
+    left: 0;
+  }
+  #car-img-2 {
+    left: 15vw;
+    z-index: 1;
+  }
+  #car-img-3 {
+    right: 0;
+  }
+  
+  #carousel img:hover {
+    z-index: 2;
+    transform: scale(1.15);
+    box-shadow: 0px 0px 50px 0px var(--font-color-1, white);
+  }
+  
+  /*latest release section*/
+  #latest-release {
+    margin-top: 50px;
+  }
+  
+  #latest-release .section-content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1px;
+  }
+  
+  #latest-release .section-content > div {
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  #latest-release .section-content > div:hover {
+    box-shadow: 0 0 1px 1px var(--font-color-1);
+  }
+  
+  .latest-release-image {
+    width: 80px;
+    height: 100%;
+    position: relative; /*to assist in the positioning of the play-button*/
+  }
+  
+  .latest-release-image .play-button {
+    display: none;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    top: 28%;
+    font-size: 2rem;
+  }
+  
+  .play-button a {
+    color: var(--play-button-color);
+  }
+  
+  #lr1 div.latest-release-image {
+    background-image: url("media/latest\ release\ songs/dr DRE.jpg");
+    background-size: 100% 100%;
+  }
+  #lr2 div.latest-release-image {
+    background-image: url("media/latest\ release\ songs/ganja gun.jpg");
+    background-size: 100% 100%;
+  }
+  #lr3 div.latest-release-image {
+    background-image: url("media/latest\ release\ songs/havana.jpg");
+    background-size: 100% 100%;
+  }
+  #lr4 div.latest-release-image {
+    background-image: url("media/latest\ release\ songs/loose yourself.jpg");
+    background-size: 100% 100%;
+  }
+  
+  .latest-release-image:hover {
+    opacity: 0.7;
+  }
+  .latest-release-image:hover .play-button {
+    display: block;
+  }
+  
+  .latest-release-info {
+    width: 19vw;
+    min-width: 189px;
+    height: 80px;
+    position: relative; /*to position various elements inside this div*/
+    display: inline-block;
+    color: var(--font-color-2, white);
+    vertical-align: top;
+    font-size: 1rem;
+  }
+  
+  .lr-name {
+    font-weight: 500;
+    font-size: 1.13rem;
+    letter-spacing: 1px;
+    line-height: 21px;
+    overflow-wrap: break-word;
+  }
+  
+  .lr-time {
+    position: absolute;
+    right: 0;
+    top: 27%;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .lr-date {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-top: 8px;
+  }
+  
+  .latest-release-info > a > i {
+    color: var(--font-color-2, white);
+    float: right;
+    font-size: 1.2rem;
+  }
+  
+  .lr-options {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28%;
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.7);
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .lr-options:target {
+    display: inline-block;
+    z-index: 1; /*when options menu is active, it should come above everything to function well*/
+  }
+  
+  .lr-options-item:hover {
+    width: 100%; /*so that background-color is visible in the full width available and not only behind the text content*/
+    background-color: aquamarine;
+    cursor: pointer;
+  }
+  /*end of styling of latest release section*/
+  
+  /*styling of popular artists section*/
+  #popular-artists .section-heading {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+  
+  #popular-artists .section-content {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .pa-item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 10vw;
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 50%;
+  }
+  
+  .pa-item:hover {
+    opacity: 0.82;
+    box-shadow: 0 0 30px 0px var(--font-color-2);
+  }
+  .pa-item:hover .pa-name {
+    display: inline-block;
+  }
+  
+  #pa-item-1 {
+    background-image: url("media/artists/bruno\ mars.jpg");
+    background-size: cover;
+  }
+  #pa-item-2 {
+    background-image: url("media/artists/drake.jpg");
+    background-size: cover;
+  }
+  #pa-item-3 {
+    background-image: url("media/artists/ed\ sheeran.jpg");
+    background-size: cover;
+  }
+  #pa-item-4 {
+    background-image: url("media/artists/billie\ eilish.jpg");
+    background-size: cover;
+  }
+  #pa-item-5 {
+    background-image: url("media/artists/snoop\ dogg.jpg");
+    background-size: cover;
+  }
+  #pa-item-6 {
+    background-image: url("media/artists/rudy\ mancuso.jpg");
+    background-size: cover;
+  }
+  
+  .pa-name {
+    display: none;
+    text-align: center;
+    font-size: 1.32rem;
+    color: white;
+  }
+  /*end of styling of popular artists section*/
+  
+  /*styling of stations section*/
+  #stations {
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+  
+  #stations .section-content {
+    background: linear-gradient(
+      to right,
+      rgb(43, 41, 163),
+      rgb(206, 102, 210),
+      rgb(232, 38, 80)
+    );
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+  .sta-item {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #sta-item-1 {
+    background-image: url("media/station/playlist-1.png");
+    background-size: cover;
+  }
+  #sta-item-2 {
+    background-image: url("media/station/playlist-2.jpg");
+    background-size: cover;
+  }
+  #sta-item-3 {
+    background-image: url("media/station/playlist-3.jpg");
+    background-size: cover;
+  }
+  #sta-item-4 {
+    background-image: url("media/station/playlist-4.jpg");
+    background-size: cover;
+  }
+  #sta-item-5 {
+    background-image: url("media/station/playlist-5.jpg");
+    background-size: cover;
+  }
+  #sta-item-6 {
+    background-image: url("media/station/playlist-6.jpg");
+    background-size: cover;
+  }
+  
+  .sta-bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to top,
+      rgba(250, 9, 9, 0.3),
+      rgba(250, 245, 245, 0.3)
+    );
+  }
+  
+  .sta-name {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .sta-item:hover .sta-bg {
+    display: inline-block;
+  }
+  /*end of stations section*/
+  
+  /*styling of the three banners after stations section*/
+  #banners {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 55px;
+  }
+  
+  .banner {
+    cursor: pointer;
+    width: 18vw;
+    height: 10vw;
+    overflow: hidden;
+  }
+  
+  .b-outer {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    color: var(--font-color-1);
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .banner:nth-child(1) .b-outer {
+    background-image: url("media/banners/electronic.jpg");
+    background-size: 100% 100%;
+  }
+  .banner:nth-child(2) .b-outer {
+    background-image: url("media/banners/party.jpg");
+    background-size: 100% 100%;
+  }
+  .banner:nth-child(3) .b-outer {
+    background-image: url("media/banners/road.jpg");
+    background-size: 100% 100%;
+  }
+  
+  .b-inner {
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .banner:hover .b-outer {
+    transform: scale(1.3);
+  }
+  
+  .banner:hover .b-inner {
+    transform: scale(0.72);
+  }
+  /*end of banners*/
+  
+  /*styling of latest english and latest hindi sections*/
+  .latest-eng-hin .section-heading {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+  
+  .latest-eng-hin .section-content {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .leh-item {
+    width: 9vw;
+  }
+  
+  .leh-image {
+    width: 9vw;
+    height: 9vw;
+  }
+  
+  #latest-english .leh-image {
+    background-image: url("media/english.jpg");
+    background-size: cover;
+  }
+  
+  #latest-hindi .leh-image {
+    background-image: url("media/hindi.jpg");
+    background-size: cover;
+  }
+  
+  .leh-image .play-button {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .leh-image:hover {
+    opacity: 0.7;
+  }
+  .leh-image:hover .play-button {
+    opacity: 1;
+  }
+  
+  .leh-name {
+    color: var(--font-color-2);
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  
+  .leh-date {
+    color: var(--font-color-2);
+  }
+  /*end of latest english hindi sections*/
+  
+  /*styling of aside section containing queue*/
+  .aside-header {
+    width: 100%;
+    position: relative;
+  }
+  
+  .aside-header .section-heading {
+    display: inline-block;
+    font-size: 1.9rem;
+  }
+  
+  .aside-header .queue-dropdown {
+    position: absolute;
+    top: 11px;
+    right: 5%;
+    color: rgb(160, 250, 5);
+    font-size: 1rem;
+  }
+  
+  aside .section-content {
+    padding: 5%;
+    flex-direction: column;
+    height: 70vh;
+    overflow: scroll;
+  }
+  
+  aside .section-content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /*styling of dropdown icon link*/
+  .queue-dropdown a {
+    color: rgb(160, 250, 5);
+  }
+  
+  .queue-lightbox {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: rgba(0, 255, 255, 0.6);
+    padding: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+  }
+  
+  #queue-lightbox:target {
+    height: 93px;
+    width: 98px;
+    padding: 5px;
+    z-index: 1; /*when dropdown is active, it should come above everything to function well*/
+  }
+  
+  .lightbox-item {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    color: var(--font-color-1);
+    font-size: 1rem;
+  }
+  .lightbox-item:hover {
+    background-color: #292e49;
+  }
+  
+  .queue-lightbox a {
+    text-align: center;
+    color: var(--font-color-1);
+  }
+  .queue-lightbox a:hover {
+    color: rgb(165, 21, 21);
+  }
+  
+  /*styling of various queue items*/
+  .queue-item {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+  }
+  
+  .queue-item:hover {
+    box-shadow: 0 0 1px 1px var(--font-color-1);
+  }
+  
+  /*animation to create hovering effect on heart*/
+  @keyframes popping-heart {
+    0% {
+      color: rgb(33, 22, 183);
+      transform: scale(1);
+    }
+    50% {
+      color: orangered;
+      transform: scale(1.1);
+    }
+    100% {
+      color: red;
+      transform: scale(1.2);
+    }
+  }
+  
+  .queue-item:hover .fa-heart {
+    animation-name: popping-heart;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+  }
+  
+  /*styling of the heart button*/
+  .queue-item > i {
+    position: absolute;
+    right: 1%;
+    font-size: 1.4rem;
+    color: var(--font-color-2);
+  }
+  
+  /*styling of the queue item image*/
+  .qi-image {
+    height: 80px;
+    width: 80px;
+    margin: 0 4%;
+    background-image: url("media/queue.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative; /*for adjusting the play button inside it*/
+  }
+  
+  .qi-image .play-button {
+    display: none;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    top: 28%;
+    font-size: 2rem;
+  }
+  
+  .qi-image:hover {
+    opacity: 0.7;
+  }
+  .qi-image:hover .play-button {
+    display: block;
+  }
+  
+  /*styling of queue-item name and other things inside queue-item*/
+  .qi-info {
+    color: var(--font-color-2);
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  .qi-name {
+    width: 60%;
+  }
+  
+  /*no need for the visibility of the checkbox which will control the visibility of aside section when screen width < 992px*/
+  #check {
+    display: none;
+  }
+  /*end of aside section*/
+  
+  /*bottom music player*/
+  #bottom-player {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 91vw;
+    margin-left: 4.5vw;
+    height: 60px;
+    color: var(--font-color-2);
+    background-color: rgba(9, 3, 27, 0.8);
+  }
+  
+  #bottom-player:target {
+    display: inline-block;
+    z-index: 100;
+  }
+  
+  /*bottom player's music name section styling*/
+  #bottom-player .music-name img {
+    height: 50px;
+    width: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  
+  #bottom-player .music-name > div {
+    vertical-align: top;
+  }
+  
+  #bottom-player .mn-info .mn-name {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  #bottom-player .music-name .mn-icons {
+    margin-top: 5px;
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+  
+  /*bottom player's music player section styling*/
+  #bottom-player .music-player {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    height: 100%;
+  }
+  
+  #bottom-player .music-player .music-slider {
+    width: 70%;
+    margin-left: 15%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  #bottom-player .music-player .music-slider > div {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #bottom-player .music-player .player-icons {
+    margin-left: 25%;
+    margin-top: 5px;
+    margin-bottom: 7px;
+  }
+  
+  /*styling of song player slider*/
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 75%;
+    height: 7px;
+    margin: 0 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  /*styling of bottom player play/pause buttons*/
+  #bottom-player .player-icons {
+    width: 50%;
+    display: inline-flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+  }
+  
+  /*styling of the volume adjuster section on the right end of the bottom music player*/
+  #bottom-player .music-volume {
+    vertical-align: top;
+    position: absolute;
+    right: 2%;
+    top: 30%;
+  }
+  
+  .music-volume input[type="range"] {
+    -webkit-appearance: none;
+    width: 55%;
+    height: 6px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+  }
+  
+  .music-volume input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+  }
+  
+  .music-volume input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  /*styling of bottom player's close button on top right corner*/
+  #close-player {
+    position: absolute;
+    width: 15px;
+    height: auto;
+    top: 2px;
+    right: 2px;
+    text-align: center;
+    background-color: red;
+    border-radius: 3px;
+  }
+  
+  /* adding responsiveness to index.html */
+  @media screen and (max-width: 992px) {
+    body {
+      width: 100vw;
+      padding: 0;
+    }
+  
+    main {
+      width: 90vw;
+      margin-left: 4vw;
+    }
+  
+    /* nav bar */
+    .nav-favourites {
+      display: none;
+    }
+  
+    #user-image {
+      margin-right: 92px;
+    }
+  
+    .logo-info-name {
+      font-size: 1.4rem;
+    }
+  
+    .logo-info-subname {
+      font-size: 0.85rem;
+      width: 150px;
+      line-height: 0.8rem;
+    }
+  
+    #nav-bar .search-bar input {
+      width: 27vw;
+    }
+  
+    .nav-logo img {
+      height: 6.5vh;
+      width: 6.5vh;
+    }
+  
+    #nav-bar .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    /* carousel */
+    #carousel .section-content {
+      width: 60vw;
+      height: 20vw;
+      margin-left: 15vw;
+    }
+  
+    #carousel img {
+      width: 30vw;
+      height: 20vw;
+    }
+  
+    #car-img-1 {
+      left: 0;
+    }
+    #car-img-2 {
+      left: 15vw;
+      z-index: 1;
+    }
+    #car-img-3 {
+      right: 0;
+    }
+  
+    /* latest release section */
+    #latest-release .section-content > div {
+      height: 65px;
+    }
+  
+    .latest-release-image {
+      height: 65px;
+      width: 65px;
+    }
+  
+    .latest-release-info {
+      width: 29vw;
+    }
+  
+    /* popular artists section */
+    #popular-artists .section-content {
+      justify-content: space-between;
+      width: 60vw;
+      margin-left: 15vw;
+    }
+  
+    .pa-item {
+      height: 15.5vw;
+      width: 15.5vw;
+    }
+  
+    /* stations section */
+    #stations .section-content {
+      width: 100%;
+      margin: 0;
+      justify-content: space-around;
+    }
+  
+    .sta-item {
+      height: 14vw;
+      width: 14vw;
+    }
+  
+    .sta-name {
+      font-size: 1.3rem;
+    }
+  
+    /* the three station banners */
+    .banner {
+      width: 25vw;
+      height: 15vw;
+    }
+  
+    .leh-item {
+      width: 14vw;
+    }
+  
+    /* latest english hindi section */
+    .leh-image {
+      height: 14vw;
+      width: 14vw;
+    }
+  
+    /* aside section */
+    aside {
+      display: none;
+      position: fixed;
+      width: 36vh;
+      min-width: 265px;
+      height: 85vh;
+      top: -2vh;
+      right: 4.5vw;
+      background-color: rgba(30, 22, 180, 0.75);
+    }
+  
+    /* connecting the checkbox to the display of aside section */
+    /* so that when checkbox is checked aside section visible */
+    input[id="check"]:checked ~ aside {
+      display: block;
+      z-index: 10;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .logo-info-name {
+      margin-top: 1vh;
+      font-weight: 500;
+      font-size: 1.7rem;
+    }
+  
+    .logo-info-subname {
+      display: none;
+    }
+  
+    .nav-logo img {
+      height: 6vh;
+      width: 6vh;
+    }
+  
+    .nav-logo {
+      margin-left: 4vw;
+    }
+  
+    #bottom-player .music-volume {
+      font-size: 0.8rem;
+      right: -3%;
+      top: 33%;
+    }
+  
+    #bottom-player .music-name .mn-icons {
+      display: none;
+    }
+  
+    .music-volume input[type="range"] {
+      width: 45%;
+      height: 4.5px;
+    }
+  
+    .music-volume input[type="range"]::-webkit-slider-thumb {
+      height: 12px;
+      width: 12px;
+    }
+  
+    #bottom-player .music-name .mn-icons {
+      font-size: 0.85rem;
+      margin-left: 1px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    html {
+      font-size: smaller;
+    }
+  
+    #user-image {
+      width: 4vh;
+      height: 4vh;
+      margin-right: 13vw;
+    }
+  
+    #nav-bar .hamburger {
+      right: 6vw;
+    }
+  
+    #nav-bar i.fa-bell {
+      font-size: 1.5rem;
+    }
+  
+    .logo-info-name {
+      letter-spacing: 0;
+      font-size: 1.5rem;
+      margin-top: 1.7vh;
+    }
+  
+    .nav-logo img {
+      height: 5vh;
+      width: 5vh;
+      margin-top: 1vh;
+    }
+  
+    main {
+      width: 80vw;
+      margin-left: 9vw;
+    }
+  
+    #carousel .section-content {
+      margin-left: 10vw;
+    }
+  
+    .section-heading {
+      font-size: 1.8rem;
+    }
+  
+    .lr-name {
+      font-size: 1.5rem;
+    }
+  
+    .lr-date {
+      font-size: 1rem;
+    }
+  
+    .lr-time {
+      font-size: 1.1rem;
+    }
+  
+    .latest-release-info > a > i {
+      font-size: 1.5rem;
+    }
+  
+    .latest-release-info {
+      width: 50vw;
+      min-width: 210px;
+    }
+  
+    #popular-artists .section-content {
+      justify-content: space-between;
+      width: 60vw;
+      margin-left: 10vw;
+    }
+  
+    .pa-item {
+      height: 15.5vw;
+      width: 15.5vw;
+    }
+  
+    #stations .section-content {
+      width: 60vw;
+      margin-left: 10vw;
+      justify-content: space-around;
+    }
+  
+    .sta-item {
+      height: 15.5vw;
+      width: 15.5vw;
+      min-width: 80px;
+      min-height: 80px;
+    }
+  
+    .sta-name {
+      font-size: 1.3rem;
+    }
+  
+    .banner {
+      width: 25vw;
+      min-width: 108px;
+      height: 20vw;
+    }
+  
+    .b-inner {
+      font-size: 1.4rem;
+    }
+  
+    .leh-item {
+      width: 22vw;
+    }
+  
+    .leh-image {
+      height: 22vw;
+      width: 22vw;
+    }
+  
+    #bottom-player {
+      width: 100%;
+      margin: 0;
+    }
+  
+    #bottom-player .music-name img {
+      height: 40px;
+      width: 40px;
+      margin-top: 10px;
+    }
+  
+    #bottom-player .mn-info .mn-name {
+      margin-top: 10px;
+    }
+  
+    #bottom-player .music-player .player-icons {
+      margin-top: 10px;
+    }
+  
+    #bottom-player .music-volume {
+      right: -10%;
+      top: 40%;
+    }
+  
+    .music-volume input[type="range"] {
+      width: 35%;
+      height: 4.5px;
+    }
+  }
+  /* end of responsiveness */
+  
